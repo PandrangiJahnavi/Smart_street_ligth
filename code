@@ -1,0 +1,74 @@
+#include <Wire.h>
+#include <BH1750.h>
+
+BH1750 lightMeter;
+
+#define TRIG_PIN 5
+#define ECHO_PIN 18
+#define LED_PIN 23
+
+void setup() {
+  Serial.begin(115200);
+
+  Wire.begin();
+  lightMeter.begin();
+
+  pinMode(TRIG_PIN, OUTPUT);
+  pinMode(ECHO_PIN, INPUT);
+  pinMode(LED_PIN, OUTPUT);
+
+  digitalWrite(LED_PIN, LOW);
+}
+
+float getDistance() {
+
+  digitalWrite(TRIG_PIN, LOW);
+  delayMicroseconds(2);
+
+  digitalWrite(TRIG_PIN, HIGH);
+  delayMicroseconds(10);
+
+  digitalWrite(TRIG_PIN, LOW);
+
+  long duration =
+      pulseIn(ECHO_PIN, HIGH);
+
+  float distance =
+      duration * 0.034 / 2;
+
+  return distance;
+
+  }
+
+void loop() {
+
+  float lux = lightMeter.readLightLevel();
+  float distance = getDistance();
+
+  Serial.print("Lux: ");
+  Serial.print(lux);
+  Serial.print(" Distance: ");
+  Serial.println(distance);
+
+  if (lux < 50) {
+
+    if (distance < 100|| lux < 50) {
+
+      digitalWrite(LED_PIN, HIGH);
+      Serial.println("LED ON");
+    }
+    else {
+
+      digitalWrite(LED_PIN, LOW);
+      Serial.println("LED OFF");
+    }
+  }
+  else {
+
+    digitalWrite(LED_PIN, LOW);
+    Serial.println("LED OFF");
+  }
+
+  delay(1500);
+
+}
