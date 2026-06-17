@@ -168,6 +168,4 @@ https://github.com/PandrangiJahnavi/Smart_street_ligth/blob/main/Screenshot%2020
 
 B.E. Electronics and Communication Engineering (ECE)
 
-AWS Certified Cloud Practitioner
-
 IoT | Embedded Systems | Smart City Solutions | Industrial IoT
