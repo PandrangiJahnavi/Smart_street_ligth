@@ -161,6 +161,9 @@ Intelligent street light automation and energy management.
 OUTPUT
 https://github.com/PandrangiJahnavi/Smart_street_ligth/blob/main/Screenshot%202026-06-17%20091946.png
 https://github.com/PandrangiJahnavi/Smart_street_ligth/blob/main/Screenshot%202026-06-17%20092018.png
+https://github.com/PandrangiJahnavi/Smart_street_ligth/blob/main/WhatsApp%20Image%202026-06-18%20at%2010.50.18%20AM%20(1).jpeg
+https://github.com/PandrangiJahnavi/Smart_street_ligth/blob/main/WhatsApp%20Image%202026-06-18%20at%2010.50.18%20AM.jpeg
+https://github.com/PandrangiJahnavi/Smart_street_ligth/blob/main/WhatsApp%20Image%202026-06-18%20at%2010.51.24%20AM.jpeg
 
 ## Author
 
